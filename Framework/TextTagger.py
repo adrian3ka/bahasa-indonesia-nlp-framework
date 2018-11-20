@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 from nltk.corpus import brown 
@@ -9,7 +9,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 
-# In[2]:
+# In[3]:
 
 
 class TextTagger:
@@ -33,6 +33,18 @@ class TextTagger:
             (r'(akan|antara|bagi|buat|dari|dengan|di|ke|kecuali|lepas|oleh|pada|per|peri|seperti|tanpa|tentang|untuk)$', 'IN'),
             (r'(dan|serta|atau|tetapi|melainkan|padahal|sedangkan)$','CC'),
             (r'(sejak|semenjak|sedari|sewaktu|ketika|tatkala|sementara|begitu|seraya|selagi|selama|serta|sambil|demi|setelah|sesudah|sebelum|sehabis|selesai|seusai|hingga|sampai|jika|kalau|jikalau|asal)$','SC'),
+            (r'(alam|abad|insan|hewan)(i)$','JJ'),
+            (r'(dunia|manusia|gereja|raga|surga)(wi)$','JJ'),
+            (r'(alam|insan|amal)(iah)$','JJ'),
+            (r'(normal|struktural|praktis|teknis|aktif|agresif|(komplemen|parlemen)(ter))$','JJ'), #gatau bisa apa kaga \n",
+            (r'((adi)(kodrati|busana|kuasa|luhung)|anasional|(antar)(bangsa|kota|perang)|asusila|awahama|diatonik|dispositif|dursila|ekstrakuriluler|hiperkorek|inframerah|internasional|(maha)(besar|kuasa|mulia|suci|tahu)|multinasional|(nir)(aksara|gelar)|panteistis|paranormal|(pasca)(jual|lahir)|prokomunis|purnawaktu|semipermanen|serbaguna|subtropis|superberat|swasembada|(tak)(organik|sosial)|(trans)(-Sumatra|kontinental)|(tuna)(karya|netra)|(ultra)(kanan|modern))$', 'JJ'),
+            (r'((pe)(lupa|malas|malu|marah)$','JJ'),
+            (r'((siapa|apa|mengapa|bagaimana|kenapa|apa|berapa|dimana|kapan|seseorang|sesuatu)$','PRP'), #kata tanya
+            (r'(aku|saya|hamba|kami|kita|engkau|kamu|kalian|Anda|dikau|kau|dia|beliau|mereka)$','PRP'),
+            (r'(senin|selasa|rabu|kamis|jumat|sabtu|minggu|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)$','NNP'),
+            (r'(para|sang|si)$','DT'),
+            (r'(bukan|belum|jangan|tidak|tak)$','NEG'),
+            (r'(harus|ingin|mau|sudah|telah|mungkin|pernah)$','MD')
         ]
         for f in fileName:
             print "Learning >> " + f
