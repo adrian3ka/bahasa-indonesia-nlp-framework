@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 from nltk.corpus import brown 
@@ -9,7 +9,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 
 
-# In[3]:
+# In[4]:
 
 
 class TextTagger:
@@ -36,10 +36,10 @@ class TextTagger:
             (r'(alam|abad|insan|hewan)(i)$','JJ'),
             (r'(dunia|manusia|gereja|raga|surga)(wi)$','JJ'),
             (r'(alam|insan|amal)(iah)$','JJ'),
-            (r'(normal|struktural|praktis|teknis|aktif|agresif|(komplemen|parlemen)(ter))$','JJ'), #gatau bisa apa kaga \n",
+            (r'(normal|struktural|praktis|teknis|aktif|agresif|(komplemen|parlemen)(ter))$','JJ'),
             (r'((adi)(kodrati|busana|kuasa|luhung)|anasional|(antar)(bangsa|kota|perang)|asusila|awahama|diatonik|dispositif|dursila|ekstrakuriluler|hiperkorek|inframerah|internasional|(maha)(besar|kuasa|mulia|suci|tahu)|multinasional|(nir)(aksara|gelar)|panteistis|paranormal|(pasca)(jual|lahir)|prokomunis|purnawaktu|semipermanen|serbaguna|subtropis|superberat|swasembada|(tak)(organik|sosial)|(trans)(-Sumatra|kontinental)|(tuna)(karya|netra)|(ultra)(kanan|modern))$', 'JJ'),
-            (r'((pe)(lupa|malas|malu|marah)$','JJ'),
-            (r'((siapa|apa|mengapa|bagaimana|kenapa|apa|berapa|dimana|kapan|seseorang|sesuatu)$','PRP'), #kata tanya
+            (r'((pe)(lupa|malas|malu|marah))$','JJ'),
+            (r'(siapa|apa|mengapa|bagaimana|kenapa|apa|berapa|dimana|kapan|seseorang|sesuatu)$','PRP'),
             (r'(aku|saya|hamba|kami|kita|engkau|kamu|kalian|Anda|dikau|kau|dia|beliau|mereka)$','PRP'),
             (r'(senin|selasa|rabu|kamis|jumat|sabtu|minggu|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember)$','NNP'),
             (r'(para|sang|si)$','DT'),
